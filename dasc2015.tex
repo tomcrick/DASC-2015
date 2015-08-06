@@ -15,23 +15,18 @@
 \begin{document}
 %
 % paper title
-\title{Title here}
+\title{CCTV as Smart Sensor Networks}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Giles Oatley}
-\IEEEauthorblockA{Department of Computing\\
-Cardiff Metropolitan University\\
-Cardiff, UK\\
-Email: goatley@cardiffmet.ac.uk}
-\and
-\IEEEauthorblockN{Tom Crick}
-\IEEEauthorblockA{Department of Computing\\
-Cardiff Metropolitan University\\
-Cardiff, UK\\
-Email: tcrick@cardiffmet.ac.uk}}
+\author{
+    \IEEEauthorblockN{Giles Oatley, Tom Crick, Dee Bolt}
+    \IEEEauthorblockA{Department of Computing,
+      Cardiff Metropolitan University, UK
+    \\\{goatley,tcrick,dbolt\}@cardiffmet.ac.uk}
+}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -48,7 +43,18 @@ Email: tcrick@cardiffmet.ac.uk}}
 
 
 \begin{abstract}
-Abstract here...
+With the emergence of so-called ``smart CCTV'' being able to recognise
+the precursors for disorder and civil disobedience, we present a study
+into using available CCTV networks augmented with social media
+datasets.
+
+We examine the existing CCTV infrastructure in the UK, and use an
+agent-based simulation to model interactions between people based on
+friendship networks and features derived from their social media
+usage, proposing a novel algorithm for detection of
+psychopathy. Finally, we explore the frequency of crimes occurring
+within CCTV viewsheds using available UK police crime datasets to
+illustrate the current limitations of the CCTV infrastructure.
 \end{abstract}
 
 % For peer review papers, you can put extra information on the cover
@@ -62,15 +68,39 @@ Abstract here...
 %\IEEEpeerreviewmaketitle
 
 \begin{IEEEkeywords}
-Keywords here...
+CCTV, Smart Cities, Sensors, Networks, Crowd Behaviour, Traits, Agent-Based
+Modelling, Social Media
 \end{IEEEkeywords}
 
 
 \section{Introduction}
 
-Cite papers: HAS2014~\cite{oatley+crick:2014}, ASONAM
-2014~\cite{oatley+crick_asonam2014}, FOSINT-SI
-2014~\cite{oatley+crick_fosintsi2014}, SNAM~\cite{oatley+crick:2015}, etc.
+We are interested in exploring how closed-circuit television (CCTV)
+can be combined with analysis of large-scale social media datasets to
+determine the general ``mood'' of a crowd, and to explore the
+potential and limitations of this hybrid approach to behaviour
+modelling. To this end we present a background to the CCTV
+infrastructure (and policy) in the UK, including the numbers and
+quality of the cameras networks involved. We also provide a review of
+the latest research deriving behaviours and traits from social media
+datasets.
+
+The proliferation of CCTV camera networks across urban communities in
+the UK has received a mixed reception. There has been significant
+criticism as local authorities have spent \pounds515m on CCTV and associated
+infrastructure in four years ~\cite{bbw:2012}, with mixed
+results. Furthermore, they are often reluctant to reveal how effective
+they have been for monitoring of crime and anti-social behaviour. 
+Nevertheless, with the increased focus on the development (and
+associated e-infrastructure) of smart cities, there is often
+significant funding available for ``smart'' CCTV systems, claiming to
+prevent crime by detecting crowd characteristics indicative of
+criminal behavior ~\cite{welsh+farrington:2009,dibella-et-al:2014}.
+
+
+% Cite papers: HAS2014~\cite{oatley+crick:2014}, ASONAM
+% 2014~\cite{oatley+crick_asonam2014}, FOSINT-SI
+% 2014~\cite{oatley+crick_fosintsi2014}, SNAM~\cite{oatley+crick:2015}, etc.
 
 %\newpage
 

@@ -7,7 +7,7 @@
 \usepackage{listings}
 \usepackage{fancyvrb}
 \usepackage[noadjust]{cite}
-\usepackage[pdftex,colorlinks=true]{hyperref}
+%\usepackage[pdftex,colorlinks=true]{hyperref}
 
 
 % correct bad hyphenation here
@@ -17,7 +17,7 @@
 \begin{document}
 %
 % paper title
-\title{CCTV as Smart Sensor Networks}
+\title{CCTV as a Smart Sensor Network}
 
 
 % author names and affiliations
@@ -45,10 +45,10 @@
 
 
 \begin{abstract}
-With the emergence of so-called ``smart CCTV'' being able to recognise
-the precursors for disorder and civil disobedience, we present a study
-into using available CCTV networks augmented with social media
-datasets.
+With the emergence of so-called `smart CCTV' being able to recognise
+the precursors for disorder and civil disobedience, we present a
+preliminary study into using available CCTV networks augmented with
+big social media datasets.
 
 We examine the existing CCTV infrastructure in the UK, and use an
 agent-based simulation to model interactions between people based on
@@ -73,26 +73,29 @@ networks as the fifth utility in smart cities.
 
 \begin{IEEEkeywords}
 CCTV, Smart Cities, Sensors, Networks, Crowd Behaviour, Traits, Agent-Based
-Modelling, Social Media
+Modelling, Social Networking
 \end{IEEEkeywords}
 
 
 \section{Introduction}
 
-In this paper we explore ways to model areas in a landscape, for
-example a city, in terms of cyber-physical networks and communities
-who frequently communicate through social networks with location-aware
+In this paper we explore ways to model areas in an urban landscape in
+terms of cyber-physical networks and communities who frequently
+communicate through social networks with location-aware
 information. We present a survey of data sources that can be of
 potential value in this exploration, and conduct some
 proof-of-principle experiments. We are interested in exploring how
 closed-circuit television (CCTV) can be combined with analysis of
-large-scale social media datasets to determine the general ``mood'' of
-a crowd, and to explore the potential and limitations of this hybrid
-approach to behaviour modelling. To this end we present a background
-to the CCTV infrastructure in the UK, including the
-numbers and quality of the cameras networks involved. We also provide
-a review of the latest research deriving behaviours and traits from
-social media datasets.
+large-scale social media datasets to determine the general `mood' of a
+crowd, and to explore the potential and limitations of this hybrid
+approach to behaviour modelling. To this end we provide an overview to
+the CCTV infrastructure in the UK, including the numbers and quality
+of the cameras networks involved. We also provide a review of the
+latest research deriving behaviours and traits from social media
+datasets. Finally, we introduce an agent-based simulation to model
+interactions between people based on friendship networks and features
+derived from their social media usage, proposing a novel algorithm for
+detection of psychopathy.
 
 Smart cities~\cite{goscience:2014,cosgrave-et-al:2014} are an emerging
 research, policy and planning challenge, with the potential to
@@ -147,8 +150,8 @@ they have been for monitoring of crime and anti-social
 behaviour\footnote{For example:
 \url{http://getthedata.org/questions/158/locations-of-council-operated-cctv-cameras-in-the-uk/}}.
 Nevertheless, with the increased focus on the development (and
-associated e-infrastructure) of smart cities, there is often
-significant funding available for ``smart'' CCTV systems, claiming to
+associated cyberinfrastructure) of smart cities, there is often
+significant funding available for `smart' CCTV systems, claiming to
 prevent crime by detecting crowd characteristics indicative of
 criminal behaviour ~\cite{welsh+farrington:2009,dibella-et-al:2014}.
 
@@ -183,8 +186,8 @@ ameliorate human operators misinterpreting results and preventing
 cognitive biases in inferences which may contaminate the process and
 ultimately the decision reached. Numerous data sources and techniques
 such as statistical profiling are available to the analyst, however we
-can often exhibit a ``confirmatory
-bias''~\cite{lipton:2002,lipton:2005} in that we focus upon data which
+can often exhibit a `confirmatory
+bias'~\cite{lipton:2002,lipton:2005} in that we focus upon data which
 conforms to the initial ideas formed (e.g. about who is the suspect)
 and so fail to test them by seeking evidence which contradicts our
 notions. Other errors of judgment include counterfactual thinking,
@@ -280,7 +283,7 @@ personality traits:
 
 A wide corpus of research has been carried out establishing the link
 between personality and social
-media~\cite{vazire+gosling:2004,iacobelli-et-al:2011,blamey-et-al-2012};
+media~\cite{vazire+gosling:2004,iacobelli-et-al:2011,blamey-et-al-2012,blamey-et-al-2013};
 for example, the findings of a 2014 study reveal that by mining a
 person's Facebook Likes, an algorithm was able to predict a person's
 personality more accurately than most of their friends and
@@ -315,10 +318,10 @@ an interest related to insider threat and crime informatics
 ~\cite{oatley+crick:2014,oatley+crick_asonam2014,oatley+crick_fosintsi2014,oatley+crick:2015}.
 Mairesse et al.~\cite{mairesse-et-al:2007} demonstrated it is possible
 within various contraints to use psycholinguistic databases such as
-MRC and LIWC to create models for the Five-Factor model of
-personality. The text that someone writes, preferably containing as
-little `unnatural' text as possible, will potentially reveal aspects
-of their personality.
+{\emph{MRC}} and {\emph{LIWC}} to create models for the Five-Factor
+model of personality. The text that someone writes, preferably
+containing as little `unnatural' text as possible, will potentially
+reveal aspects of their personality.
 
 We take this further by using Miller and Lynam's
 correlation~\cite{miller+lynam:2003,lynam-et-al:2005} between
@@ -521,7 +524,7 @@ representing meaningful communication between agents in an
 automatic detection of events.
 
 
-\section{Results}\label{res}
+\section{Results and Discussion}\label{res}
 
 As we discussed previously, we derived a psychopathy score from the
 {\emph{myPersonality}} dataset containing Five-Factors and subfactors,
@@ -574,12 +577,9 @@ disorder and weapons}}'', ``{\emph{Public order}}'',
 ``{\emph{Robbery}}'', ``{\emph{Shoplifting}}'', ``{\emph{Theft from
 the person}}'', ``{\emph{Vehicle crime}}'', ``{\emph{Violence and
 sexual offences}}'', ``{\emph{Violent crime}}'' (full data available
-from: \url{http://data.police.uk})}
+from: \protect\url{http://data.police.uk})}
 \label{fig:cctvcrimes}
 \end{figure}
-
-
-\section{Discussion and Conclusions}\label{disc}
 
 The technical issues surrounding smart CCTV, detecting crowd
 characteristics indicative of disorder and violence, are those related
@@ -590,9 +590,9 @@ conditions, improper viewing angle, installation position, image
 correction for lens distortion, and so on.  A major problem with many
 CCTV installations is that the wrong lens is chosen, often resulting
 in people being too small to successfully identify. Unless a camera
-achieves `Recognition of a Known Person' it is unlikely to be used by
-the police in the UK to identify a person for prosecution in a court
-of law, and the police have stated that over 80\% of the video
+achieves `{\emph{Recognition of a Known Person}}' it is unlikely to be
+used by the police in the UK to identify a person for prosecution in a
+court of law, and the police have stated that over 80\% of the video
 evidence that they collect fails to meet the required standard.
 
 CCTV offers the ability to validate or verify theories about
@@ -622,6 +622,9 @@ identify people at most points within the scene. Also, most cameras
 installed today have fields of view that are set too wide to allow
 facial recognition throughout most of their coverage area.
 
+
+\section{Conclusions}\label{conc}
+
 Utilising CCTV as a sensor to accurately model or give feedback on the
 reality of occurrences in digital space currently has several
 drawbacks, relating to both placement/position and quality of the
@@ -630,40 +633,17 @@ our simulation include the lack of accurate/genuine geotagged data,
 and from lack of information about CCTV cameras -- the UK city of
 Leicester is one of the few with accurately recorded positions for a
 study, but even of these we do not know the actual camera types (and
-therefore the correct viewshed to use).
-
-With many CCTV systems having sophisticated recording and real-time
-logging/tracking capabilities, it raises wider questions about civil
-liberties, privacy and data retention~\cite{goold:2002} --
-particularly in light of anti-terrorist legislation in both the US
-and UK~\cite{bowden:2002} -- despite numerous Freedom of Information
-(FoI) requests to identify the specifics of systems in cities across
-the UK. While there is significant potential for governments and
-organisations to promote open and big data (for example, in supporting
-effective policy-making~\cite{nesta:2015}), we raise the fact that it
-is now clearly possible, and will in the future become more accurate,
-that widespread data retention and aggregation could lead to abuses of
-civil liberties. The recent re-positioning of public-private
-partnerships in national cyber security strategies, particularly in
-the US and UK~\cite{carr+crick:2015}, also raises questions
-surrounding ambiguity of ownership, governance and
-responsibility. Consider the lingering stigma of false accusations in
-the press, or perhaps of being added in a gang-database (and never
-removed), etc. We note the work of key organisations in this space,
-such as the Electronic Frontier
-Foundation\footnote{\url{https://www.eff.org/}} and the Open Rights
-Group\footnote{\url{https://www.openrightsgroup.org/}}.
-
-The results of the simulation are enough to demonstrate that many
-forms of evidence, rich enough to describe the range from transient
-moods to more permanent traits, can be derived from social media data;
-CCTV is a form of validation of the event. As of yet there does not
-exist a dataset that combines all of these features, for interest a
-civil unrest dataset containing `live' geotagged tweets or status
-updates, with accompanying CCTV feed. However this should not be too
-far away, with CCTV set to become a commodity like other
-utilities~\cite{graham:2002}, and smart CCTV touted as being able to
-recognise the precursors for civil disobedience and riots.
+therefore the correct viewshed to use). The results of the simulation
+are enough to demonstrate that many forms of evidence, rich enough to
+describe the range from transient moods to more permanent traits, can
+be derived from social media data; CCTV is a form of validation of the
+event. As of yet there does not exist a dataset that combines all of
+these features, for interest a civil unrest dataset containing `live'
+geotagged tweets or status updates, with accompanying CCTV
+feed. However this should not be too far away, with CCTV set to become
+a commodity like other utilities~\cite{graham:2002}, and smart CCTV
+touted as being able to recognise the precursors for civil
+disobedience and riots.
 
 The work of Schwartz et al.~\cite{schwartz-et-al:2013}
 leverages what people say in social media to find distinctive words,
@@ -694,12 +674,34 @@ today commonly communicating through social networking, we expose
 geotagged interactions. We can explore urban characteristics which are
 reflected in the social networks through crowd behaviour.
 
-We thus have a preliminary implementation of a model, with the
-intention of being able to successfully model complex dynamics among
-population, utilising features drawn from sources such as social media
-updates, knowledge about friendship, networks, family, location. The
-wider aims are broad; however initially we are interested merely to
-develop our research ideas around representation.
+We therefore have a implementation of a preliminary model and system,
+with the intention of being able to successfully model complex
+dynamics among population, utilising features drawn from sources such
+as big social media datasets, knowledge about friendship, networks,
+family, location. The wider aims are broad; however, we are currently
+focused on developing our research ideas around representation.
+
+Nevertheless, with many CCTV systems having sophisticated recording
+and real-time logging/tracking capabilities, it raises wider questions
+about civil liberties, privacy and data retention~\cite{goold:2002} --
+particularly in light of anti-terrorist legislation in both the US and
+UK~\cite{bowden:2002} -- despite numerous Freedom of Information (FoI)
+requests to identify the specifics of systems in cities across the
+UK. While there is significant potential for governments and
+organisations to promote open and big data (for example, in supporting
+effective policy-making~\cite{nesta:2015}), we raise the fact that it
+is now clearly possible, and will in the future become more accurate,
+that widespread data retention and aggregation could lead to abuses of
+civil liberties. The recent re-positioning of public-private
+partnerships in national cyber security strategies, particularly in
+the US and UK~\cite{carr+crick:2015}, also raises questions
+surrounding ambiguity of ownership, governance and
+responsibility. Consider the lingering stigma of false accusations in
+the press, or perhaps of being added in a gang-database (and never
+removed), etc. We note the work of key organisations in this space,
+such as the Electronic Frontier
+Foundation\footnote{\url{https://www.eff.org/}} and the Open Rights
+Group\footnote{\url{https://www.openrightsgroup.org/}}.
 
 %\newpage
 
